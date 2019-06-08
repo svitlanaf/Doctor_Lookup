@@ -16,13 +16,13 @@ $(document).ready(function() {
            let body = JSON.parse(response);
            for(let i= 0; i<body.data.length; i++) {
                if (body.data[i].practices[0].accepts_new_patients == true) {
-                   $('.searchResults').append("<li>"  + body.data[i].profile.first_name + " " + body.data[i].profile.last_name + " " + body.data[i].specialties[0].actor + " " + body.data[i].practices[0].phones[0].number + body.data[i].practices[0].website + "This doctor is accepting new patients." + "</li>");
+                   $('#searchResults').append("<ul>" + "<li>" + "Doctor: " + body.data[i].profile.first_name + " " + body.data[i].profile.last_name + "<br>" + "Specialties: " + body.data[i].specialties[0].actor + "<br>" + "Phone number: " + body.data[i].practices[0].phones[0].number + "<br>" + "Practice website: "+ body.data[i].practices[0].website+ "<br>" + "This doctor is accepting new patients."+ "</li>"+"</ul>");
                 } else {
-                    $('.searchResults').append("<li>"  + body.data[i].profile.first_name + " " + body.data[i].profile.last_name + " " + body.data[i].specialties[0].actor + " " + body.data[i].practices[0].phones[0].number + body.data[i].practices[0].website + "This doctor is not accepting new patients." + "</li>");
+                    $('#searchResults').append("<ul>" + "<li>" + "Doctor: " + body.data[i].profile.first_name + " " + body.data[i].profile.last_name + "<br>" + "Specialties: " + body.data[i].specialties[0].actor + "<br>" + "Phone number: " + body.data[i].practices[0].phones[0].number+ "<br>" + "Practice website: "+ body.data[i].practices[0].website + "<br>" + "This doctor is not accepting new patients."+ "</li>" + "</ul>");
                 }
             }
         }, function(error) {
-            $('.showErrors').text(`There was an error processing your request: ${error.message}`);
+            $('#showErrors').text(`There was an error processing your request: ${error.message}`);
         });
     });
 })
