@@ -27,7 +27,7 @@ _This web application allows to make a searhh for a doctor in Seattle._
 
 ## Known Bugs / Limitations
 
-* _No bugs found at the moment._
+* _If Bad request error occured the error message is not shown (probably it's a packages problem)._
 
 ## Support and contact details
 
