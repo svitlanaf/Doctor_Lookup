@@ -5,23 +5,26 @@ import './styles.css';
 import { DoctorSearch } from './DoctorSearch.js';
 import { LocationSearch } from './LocationSearch.js';
 
-function search(place, query) {
-    let output = [];
-    let locationSearch = new LocationSearch();
-    let doctorSearch = new DoctorSearch();
-    
-
-
 
 $(document).ready(function() {
     $('#userInput').submit(function(e) {
        e.preventDefault();
+       let place = $('#city').val();
+       $('#city').val("");
        let query = $('#query').val();
        $('#query').val("");
+
+       let locationSearch = new LocationSearch();
        let newDoctorSearch = new DoctorSearch();
-       
-       let promise = newDoctorSearch.getDoctor(query);
-       promise.then(function(response) {
+       locationSearch.getLocation(place)
+       .then(function(response) {
+           let body = JSON.parse(response);
+           let locationLat = body.results[0].geometry.lat;
+           let locationLng = body.results[0].geometry.lng;
+           let range = 20;
+           return newDoctorSearch.getDoctor(locationLat, locationLng, range, query);
+      })
+       .then(function(response) {
            let body = JSON.parse(response);
            if(body.data.length>0) {
                $('#searchResults').text('');
