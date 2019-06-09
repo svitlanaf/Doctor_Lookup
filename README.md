@@ -28,6 +28,7 @@ _This web application allows to make a searhh for a doctor in Seattle._
 ## Known Bugs / Limitations
 
 * _If Bad request error occured the error message is not shown (probably it's a packages problem)._
+* _Not a bug itself ubut it's better to add handling of "undefined" websites._
 
 ## Support and contact details
 

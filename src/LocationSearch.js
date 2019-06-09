@@ -1,8 +1,8 @@
-export class DoctorSearch {
-    getDoctor(query, location) {
+export class LocationSearch {
+    getLocation(place) {
         return new Promise(function(resolve, reject) {
             let request = new XMLHttpRequest();
-            let url = `https://api.betterdoctor.com/2016-03-01/doctors?query=${query}&location=${location}&&limit=100&user_key=${process.env.exports.apiKey}`
+            let url = `https://api.opencagedata.com/geocode/v1/json?q=${place}&key=${process.env.place.apiKey}`
             request.onload = function() {
                 if (this.status == 200) {
                     resolve(request.response);
