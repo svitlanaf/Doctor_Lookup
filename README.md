@@ -1,17 +1,17 @@
 # _Doctor Lookup_
 
-#### _Doctor Lookup is a web application that takes user's medical issue, doctor's name or speciality and returns a list of doctors with their first name, last name, address, phone number, website and whether or not they are accepting new patients._
+#### _Doctor Lookup is a web application that takes user's location and medical issue, doctor's name or speciality and returns a list of doctors with their first name, last name, address, phone number, website and whether or not they are accepting new patients._
 
 #### By _**Svitlana Filatova**_
 
 ## Description
-_This web application allows to make a searhh for a doctor in Seattle._
+_This web application allows to make a searhh for a doctor in your city._
 
 | User stories                                                                                                                                                                             |
 |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| I should be able to enter a medical issue to receive a list of doctors in Seattle.                                                                                                       |
-| I should be able to to enter a doctor name to receive a list of doctors in Seattle.                                                                                                      |
-| I should be able to to enter a doctor speciality to receive a list of doctors in Seattle.                                                                                                |
+| I should be able to enter a medical issue to receive a list of doctors in my city.                                                                                                       |
+| I should be able to to enter a doctor name to receive a list of doctors in my city.                                                                                                      |
+| I should be able to to enter a doctor speciality to receive a list of doctors in my city.                                                                                                |
 | I should be able to get a list of doctors with the following information: first name, last name, address, phone number, website and whether or not the doctor is accepting new patients. |
 | If no doctors found I should be able to get an appropriate notification.                                                                                                                 |
 
