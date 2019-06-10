@@ -31,9 +31,9 @@ $(document).ready(function() {
 
            for(let i= 0; i<body.data.length; i++) {
                if (body.data[i].practices[0].accepts_new_patients == true) {
-                   $('#searchResults').append("<br>" + "<ul>" + "<li>" + "Doctor: " + body.data[i].profile.first_name + " " + body.data[i].profile.last_name + "<br>" + "Specialties: " + body.data[i].specialties[0].actor + "<br>" + "Phone number: " + body.data[i].practices[0].phones[0].number + "<br>" + "Practice website: "+ body.data[i].practices[0].website+ "<br>" + "This doctor is accepting new patients."+ "</li>"+"</ul>");
-                } else {
-                    $('#searchResults').append("<br>" + "<ul>" + "<li>" + "Doctor: " + body.data[i].profile.first_name + " " + body.data[i].profile.last_name + "<br>" + "Specialties: " + body.data[i].specialties[0].actor + "<br>" + "Phone number: " + body.data[i].practices[0].phones[0].number+ "<br>" + "Practice website: "+ body.data[i].practices[0].website + "<br>" + "This doctor is not accepting new patients."+ "</li>" + "</ul>");
+                   $('#searchResults').append("<br>" + "<ul>" + "<li>" + "Doctor: " + body.data[i].profile.first_name + " " + body.data[i].profile.middle_name + " " + body.data[i].profile.last_name + "<br>" + "Specialties: " + body.data[i].specialties[0].actor + "<br>" + "Phone number: " + body.data[i].practices[0].phones[0].number + "<br>" + "Practice website: "+ body.data[i].practices[0].website+ "<br>" + "This doctor is accepting new patients."+ "</li>"+"</ul>");
+               } else {
+                    $('#searchResults').append("<br>" + "<ul>" + "<li>" + "Doctor: " + body.data[i].profile.first_name + " " + body.data[i].profile.middle_name + " " + body.data[i].profile.last_name + "<br>" + "Specialties: " + body.data[i].specialties[0].actor + "<br>" + "Phone number: " + body.data[i].practices[0].phones[0].number+ "<br>" + "Practice website: "+ body.data[i].practices[0].website + "<br>" + "This doctor is not accepting new patients."+ "</li>" + "</ul>");
                 }
             }
            } else {

@@ -21,14 +21,14 @@ _This web application allows to make a searhh for a doctor in Seattle._
 * _Clone this repository on your Desktop._
 * _Open Terminal (for Mac users) or PowerShell (for Windows users), navigate to age_calculator folder(cd .../Desktop/doctor) and run the following command: npm install._
 * _An application requiers a unique API key to use the BetterDoctor API. To get one you need to register here https://developer.betterdoctor.com/ with listing Epicodus as the Organization/Company Name._
+* _An application requires a unique API key to use OpenCage Geocoding. To get it you need to register here https://opencagedata.com by clicking on "Sign Up For Free API Key" button._
 * _Once you get the key you need to copy and paste it in DoctorSearch.js file (url variable, instead of '${process.env.exports.apiKey}')._
 * _Now run npm start (it will build the project and open an html file automatically)._
 
 
 ## Known Bugs / Limitations
 
-* _If Bad request error occured the error message is not shown (probably it's a packages problem)._
-* _Not a bug itself ubut it's better to add handling of "undefined" websites._
+* _Not handling "undefined" websites._
 
 ## Support and contact details
 
